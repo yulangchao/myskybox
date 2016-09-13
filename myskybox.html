@@ -4,6 +4,21 @@
 <title>myskybox</title>
 <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
 
+<style> 
+
+h3#div2
+{
+	width:200px;
+	height:150px;
+	background: linear-gradient(to right, red, orange, yellow, green, blue);
+	border:1px solid black;
+	transform:rotate(30deg);
+	-ms-transform:rotate(30deg); /* IE 9 */
+	-webkit-transform:rotate(30deg); /* Safari and Chrome */
+	
+}
+</style>
+
 <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
    
 <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -402,7 +417,7 @@
             // Up cursor key or W
             xRot -= 1;
         }
-        if (currentlyPressedKeys[40]||currentlyPressedKeys[90]) {
+        if (currentlyPressedKeys[40]||currentlyPressedKeys[83]) {
             // Down cursor key or Z
             xRot += 1;
         }
@@ -521,26 +536,33 @@
 	<div class="container">
 	  <div class="jumbotron">
 		<h1>Richard's Page</h1>
-		<p>Start to create the amazing page!</p> 
+		
+		<blockquote>
+		
+			<p><small>Start to create the amazing page!</small></p>
+		</blockquote>		
 	  </div>
 	  <div class="row">
 		<div class="col-sm-4">
 		  <h3>My Skybox</h3>
-		  
+		  <canvas id="lesson05-canvas" style="border: none;" width="300" height="300"></canvas>
+		  <h6>using [&larr;(A)，&uarr;(W)，&rarr;(D)，&darr;(S)] for moving your eye direction</h6>
 		</div>
 		<div class="col-sm-4">
 		  <h3><a href="https://sites.google.com/site/richardyych/myresume/YingchaoYuResume.pdf">My Resume</a></h3>
-
+		  <br>
+		  <br>
+		  <h3 id="div2"><font color="white"><br>Hello, This is my resume site!</font></h3>
 		</div>
 		<div class="col-sm-4">
 		  <h3><a href="https://github.com/yulangchao">My Github</a></h3>        
-
+		  <img src="github1.jpg" class="img-circle" width="200" height="200">
 		</div>
 	  </div>
 	</div>
     
-	<canvas id="lesson05-canvas" style="border: none;" width="500" height="500"></canvas>
-
+		
+   
 
 </body>
 
