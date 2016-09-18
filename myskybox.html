@@ -13,19 +13,18 @@ h3#div2
 	background: linear-gradient(to right, red, orange, yellow, green, blue);
 	border:1px solid black;
 	transform:rotate(30deg);
-	-ms-transform:rotate(30deg); /* IE 9 */
-	-webkit-transform:rotate(30deg); /* Safari and Chrome */
+
 	
 }
 </style>
 
 <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
-   
-<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
 
 <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
    
-<script type="text/javascript" src="glMatrix-0.9.5.min.js"></script>
+<script type="text/javascript" src= "glMatrix-0.9.5.min.js"></script>
+
+<script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js"></script>
 
 <script id="shader-fs" type="x-shader/x-fragment">
     precision mediump float;
@@ -195,27 +194,27 @@ h3#div2
 
         var textureImages = [
             { 
-                src : "front.png",
+                src : "front.bmp",
                 loc : "front"
             },
             {
-                src : "back.png",
+                src : "back.bmp",
                 loc : "back"
             },
             {
-                src : "up.png",
+                src : "top.bmp",
                 loc : "top"
             },
             {
-                src : "down.png",
+                src : "bottom.bmp",
                 loc : "bottom"
             },
             {
-                src : "left.png",
+                src : "left.bmp",
                 loc : "left"
             },
             {
-                src : "right.png",
+                src : "right.bmp",
                 loc : "right"
             }
         ];
@@ -511,7 +510,7 @@ h3#div2
 
 
     function webGLStart() {
-        var canvas = document.getElementById("lesson05-canvas");
+        var canvas = document.getElementById("mycanvas");
         initGL(canvas);
         initShaders();
         initBuffers();
@@ -527,6 +526,26 @@ h3#div2
 
 </script>
 
+<script  type="text/javascript" src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<script id="jqueryplugins9_jquery_rotate_22" type="text/javascript" class="library" src="jQueryRotate.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+
+
+
+var angle = 0;
+setInterval(function(){
+      angle+=3;
+     $("#div2").rotate(angle);
+	 $("#github1").rotate(-angle);
+},50);
+
+
+});
+</script>
 
 </head>
 
@@ -556,7 +575,7 @@ h3#div2
 	  <div class="row">
 		<div class="col-sm-4">
 		  <h3>My Skybox</h3>
-		  <canvas id="lesson05-canvas" style="border: none;" width="300" height="300"></canvas>
+		  <canvas id="mycanvas" style="border: none;" width="300" height="300"></canvas>
 		  <h6>using [&larr;(A)，&uarr;(W)，&rarr;(D)，&darr;(S)] for moving your eye direction</h6>
 		</div>
 		<div class="col-sm-4">
@@ -564,17 +583,18 @@ h3#div2
 		  <br>
 		  <br>
 		  <h3 id="div2"><font color="white"><br>Hello, This is my resume site!</font></h3>
+		  
 		</div>
 		<div class="col-sm-4">
 		  <h3><a href="https://github.com/yulangchao">My Github</a></h3>        
-		  <img src="github1.jpg" class="img-circle" width="200" height="200">
+		  <img id="github1" src="github1.jpg" class="img-circle" width="200" height="200">
 		</div>
 	  </div>
 	</div>
     
-	<div style="position:absolute; bottom:0;"><strong>My contact information: Tel: 6047195215 ; Skype: tzq_ric ; Email: Richardyych@gmail.com</strong></div>
-		
-   
+	<footer style="position:absolute; bottom:0;"><strong>My contact information: Tel: 6047195215 ; Skype: tzq_ric ; Email: Richardyych@gmail.com</strong></footer>
+	
+
 
 </body>
 
